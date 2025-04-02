@@ -215,11 +215,15 @@ nav ul li a:hover::after{
     grid-gap: 40px;
     margin-top: 50px;
 }
-.work{
-    border-radius: 10px;
+.work {
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* fallback in case video doesn't load */
 }
+
 
 .work img{
     width: 100%;
@@ -354,7 +358,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/smiling\ lights.jpg);
+        background-image: url(images/portrait\ css\ mobile.png);
     }
     .header-text{
         margin-top: 100%;
@@ -419,9 +423,10 @@ nav .fa-solid{
 
 .project-video {
     width: 100%;
+    height: auto;
+    max-width: 100%;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
     object-fit: cover;
-    height: 100%;
+    aspect-ratio: 16 / 9;
 }
